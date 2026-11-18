@@ -1,0 +1,5 @@
+{
+  "api_token": "ВАШ_ТОКЕН_PROVERKACHEKA",
+  "base_url": "https://proverkacheka.com/api/v1/check/get",
+  "note": "Токен создаётся в ЛК после регистрации. Бесплатный тариф: ~15 запросов в сутки. Сервис — неофициальная обёртка API ФНС."
+}

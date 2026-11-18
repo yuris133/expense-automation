@@ -1,0 +1,18 @@
+# Персональные данные и рабочие файлы конвейера — не публикуем
+data/
+receipts/
+reports/
+logs/
+tmp/
+groups/
+__pycache__/
+*.pyc
+
+# Конфиги с реальными токенами — каждый делает свои из *.example
+config/telegram.json
+config/proverkacheka.json
+
+# Служебные папки
+.claude/
+.obsidian/
+.env

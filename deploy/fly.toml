@@ -1,0 +1,27 @@
+# Конфигурация приложения Fly.io (деплой: см. README, раздел «Хостинг на Fly.io»).
+app = "receipts-bot-ИЗМЕНИТЕ-НА-УНИКАЛЬНОЕ"
+primary_region = "fra"
+
+[build]
+  dockerfile = "deploy/Dockerfile"
+
+[env]
+  TZ = "Europe/Moscow"
+
+[http_service]
+  internal_port = 0
+  auto_stop_machines = false
+  auto_start_machines = true
+
+[checks]
+
+# Бот работает long-polling'ом: наружу ничего не публикуем
+# (раздел [http_service] указан только чтобы fly не выставлял 443 автоматически без него).
+
+[vm]
+  size = "shared-cpu-1x"
+  memory = "512mb"
+
+[mounts]
+  source = "receipts_data"
+  destination = "/data"

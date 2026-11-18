@@ -1,0 +1,19 @@
+[Unit]
+Description=Telegram-бот приёма чеков
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bot
+Group=bot
+WorkingDirectory=/opt/receiptsbot
+ExecStart=/opt/receiptsbot/venv/bin/python -u src/telegram_bot.py
+Restart=always
+RestartSec=10
+Environment=PYTHONUTF8=1
+Environment=PYTHONIOENCODING=utf-8
+Environment=TESSDATA_PREFIX=/usr/share/tesseract-ocr/5/tessdata
+
+[Install]
+WantedBy=multi-user.target

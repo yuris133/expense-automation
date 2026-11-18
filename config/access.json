@@ -1,0 +1,15 @@
+{
+  "groups": {
+    "main": {
+      "label": "Основная",
+      "users": [],
+      "usernames": []
+    },
+    "office": {
+      "label": "Офис",
+      "users": [],
+      "usernames": []
+    }
+  },
+  "unknown_policy": "reject"
+}
